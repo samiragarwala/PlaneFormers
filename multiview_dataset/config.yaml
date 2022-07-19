@@ -1,0 +1,13 @@
+seed: 123
+num_gpus: 1
+num_epochs: 100
+resume_dir: None
+print_interval: 10
+dataset_split_path: '/Pool1/users/jinlinyi/workspace/multi-surface-recon/multiview_dataset/split'
+image_path: '/Pool1/users/jinlinyi/dataset/mp3d_rpnet_v4_sep20/observations'
+rgb_path: '/Pool1/users/jinlinyi/dataset/mp3d_rpnet_v4_sep20/rgb'
+camera_path: '/Pool1/users/jinlinyi/dataset/mp3d_rpnet_v4_sep20/cameras'
+id2semantic: '/Pool1/users/jinlinyi/dataset/mp3d_rpnet_v4_sep20/id2semantic'
+planeFit_path: '/Pool1/users/jinlinyi/dataset/mp3d_rpnet_v4_sep20/planes_ply_mp3dcoord_refined'
+debug_path: '/Pool1/users/jinlinyi/public_html/p-multi-surface/v07_set5/test'
+output_path: './multiview_set5_v2'
