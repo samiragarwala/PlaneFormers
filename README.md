@@ -72,7 +72,7 @@ If you find this code useful in your research, please consider citing:
 ```text
 @inproceedings{agarwala2022planes,
       title={PlaneFormers: From Sparse View Planes to 3D Reconstruction}, 
-      author={Samir Agarwala, Linyi Jin, Chris Rockwell, David F. Fouhey},
+      author={Samir Agarwala and Linyi Jin and Chris Rockwell and David F. Fouhey},
       booktitle = {ECCV},
       year={2022}
 }
