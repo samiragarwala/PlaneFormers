@@ -1,138 +1,16 @@
-<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
-<script type="text/javascript">google.load("jquery", "1.3.2");</script>
-
-<style type="text/css">
-	body {
-		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-		font-weight:300;
-		font-size:18px;
-		margin-left: auto;
-		margin-right: auto;
-		width: 1100px;
-	}
-	
-	h1 {
-		font-size:32px;
-		font-weight:300;
-	}
-	
-	.disclaimerbox {
-		background-color: #eee;		
-		border: 1px solid #eeeeee;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-		padding: 20px;
-	}
-
-	video.header-vid {
-		height: 140px;
-		border: 1px solid black;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-	}
-	
-	img.header-img {
-		height: 140px;
-		border: 1px solid black;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-	}
-	
-	img.rounded {
-		border: 1px solid #eeeeee;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-	}
-	
-	a:link,a:visited
-	{
-		color: #1367a7;
-		text-decoration: none;
-	}
-	a:hover {
-		color: #208799;
-	}
-	
-	td.dl-link {
-		height: 160px;
-		text-align: center;
-		font-size: 22px;
-	}
-	
-	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-		5px 5px 0 0px #fff, /* The second layer */
-		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-		10px 10px 0 0px #fff, /* The third layer */
-		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
-		15px 15px 0 0px #fff, /* The fourth layer */
-		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
-		20px 20px 0 0px #fff, /* The fifth layer */
-		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
-		25px 25px 0 0px #fff, /* The fifth layer */
-		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
-		margin-left: 10px;
-		margin-right: 45px;
-	}
-
-	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
-
-		margin-left: 10px;
-		margin-right: 45px;
-	}
-
-
-	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-		5px 5px 0 0px #fff, /* The second layer */
-		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-		10px 10px 0 0px #fff, /* The third layer */
-		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
-		margin-top: 5px;
-		margin-left: 10px;
-		margin-right: 30px;
-		margin-bottom: 5px;
-	}
-	
-	.vert-cent {
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-	
-	hr
-	{
-		border: 0;
-		height: 1px;
-		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-	}
-</style>
-
 <html>
 <head>
+
 	<title>PlaneFormers: From Sparse View Planes to 3D Reconstruction</title>
-	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:image" content="./resources/teaser.png>">
 	<meta property="og:title" content="PlaneFormers: From Sparse View Planes to 3D Reconstruction" />
-	<meta property="og:description" content="Paper description." />
-
-	<!-- Get from Google Analytics -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src=""></script> 
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-75863369-6');
-	</script>
+	<meta property="og:description" content="Samir Agarwala, Linyi Jin, Chris Rockwell, David F. Fouhey" />
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="website.css">
+	<link rel="stylesheet" href="demo-styles.css">
+	<link rel="icon" href="./resources/favicon.ico">
 </head>
 
 <body>
@@ -188,12 +66,12 @@
 				</td>
 				<td align=center width=33%>
 					<center>
-						<span style="font-size:20px"><a href='https://github.com/samiragarwala/PlaneFormers'>[Code]</a></span><br>
+						<span style="font-size:20px"><a href='https://github.com/samiragarwala/PlaneFormers'>[Code]</a></span>
 					</center>
 				</td>
 				<td align=center width=33%>
 					<center>
-						<span style="font-size:20px"><a href='https://youtu.be/3VPsOxXEMlI'>[Video]</a></span><br>
+						<span style="font-size:20px"><a href='https://youtu.be/3VPsOxXEMlI'>[Video]</a></span>
 					</center>
 				</td>
 			</tr>
@@ -211,7 +89,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td width=600px>
 					<center>
 					<span style="font-size:14px"><i>Given a sparse set of images, our method detects planes and cameras, and produces 
 						plane correspondences and refined cameras using a Plane Transformer from which it can reconstruct the scene in 3D.</span></i>
@@ -223,42 +101,413 @@
 	</center>
 	<br>
 
-	<div align=left>
-		<p style="font-size: 18px">
-			We present an approach for the planar surface reconstruction of a scene from images with limited overlap. 
-			This reconstruction task is challenging since it requires jointly reasoning about single image 3D reconstruction, 
-			correspondence between images, and the relative camera pose between images. Past work has proposed optimization-based approaches. 
-			We introduce a simpler approach, the PlaneFormer, that uses a transformer applied to 3D-aware plane tokens to perform 3D reasoning. 
-			Our experiments show that our approach is substantially more effective than prior work, and that several 3D-specific design decisions 
-			are crucial for its success.
-		</p>
+	<div>
+		<center>
+			<p class="abstract">
+				We present an approach for the planar surface reconstruction of a scene from images with limited overlap. 
+				This reconstruction task is challenging since it requires jointly reasoning about single image 3D reconstruction, 
+				correspondence between images, and the relative camera pose between images. Past work has proposed optimization-based approaches. 
+				We introduce a simpler approach, the PlaneFormer, that uses a transformer applied to 3D-aware plane tokens to perform 3D reasoning. 
+				Our experiments show that our approach is substantially more effective than prior work, and that several 3D-specific design decisions 
+				are crucial for its success.
+			</p>
+		</center>
 	</div>
+	<br><br>
 	
 
 	<hr>
 	<center><h1>Video</h1></center>
-	<p align="center">
-		<iframe width="50%" height="50%" src="https://www.youtube.com/embed/3VPsOxXEMlI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</p>
+	<div>
+		<p align="center">
+			<iframe width="50%" height="50%; min-width:300px" src="https://www.youtube.com/embed/3VPsOxXEMlI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</p>
+	</div>
 
+	<br><br>
 	<hr>
-	<br>
 
-	<table align=center width=900px>
+	<center><h1>Interactive Results</h1></center>
+	<div class="tab" align=center>
+		<button class="tablinks" style="font-size:22px; padding: 0.5% 0.5%;" onclick="onClick(event, 'set2')">2 Views</button>
+		<button class="tablinks" style="font-size:22px; padding: 0.5% 0.5%;" onclick="onClick(event, 'set3')">3 Views</button>
+		<button class="tablinks" style="font-size:22px; padding: 0.5% 0.5%;" onclick="onClick(event, 'set5')">5 Views</button>
+	</div>
+
+	<br><br>
+
+
+	<div id="set2" class="tabcontent" style="display:block">
+		<div class='container'>
+			<div class ='row' >
+				<div class ='column'>
+					<div class='header header-input'>View A</div>
+				</div>
+				<div class ='column'>
+					<div class='header header-input'>View B</div>
+				</div>
+				<div class ='column'>
+					<div class='header header-result'>Ours</div>
+				</div>
+				<div class ='column'>
+					<div class='header header-result'>Ground Truth</div>
+				</div>
+			</div>
+
+			<div class='row'>
+				<div class='column'>
+					<a href='./resources/set2/0484/0.png'><img class='input-img view1' src='./resources/set2/0484/0.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set2/0484/1.png'><img class='input-img view2' src='./resources/set2/0484/1.png'></img></a>
+				</div>
+				<div class='column'>
+			
+					<div id="card">
+						<model-viewer src="./resources/set2/0484/pred.glb" class="set2" shadow-intensity="1" exposure="0.7" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+				<div class='column'>
+			
+					<div id="card">
+						<model-viewer src="./resources/set2/0484/gt.glb" class="set2" shadow-intensity="1" exposure="0.7" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='column'>
+					<a href='./resources/set2/0758/0.png'><img class='input-img view1' src='./resources/set2/0758/0.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set2/0758/1.png'><img class='input-img view2' src='./resources/set2/0758/1.png'></img></a>
+				</div>
+				<div class='column'>
+			
+					<div id="card">
+						<model-viewer src="./resources/set2/0758/pred.glb" class="set2" shadow-intensity="1" exposure="0.7" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+				<div class='column'>
+			
+					<div id="card">
+						<model-viewer src="./resources/set2/0758/gt.glb" class="set2" shadow-intensity="1" exposure="0.7" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='column'>
+					<a href='./resources/set2/0992/0.png'><img class='input-img view1' src='./resources/set2/0992/0.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set2/0992/1.png'><img class='input-img view2' src='./resources/set2/0992/1.png'></img></a>
+				</div>
+				<div class='column'>
+			
+					<div id="card">
+						<model-viewer src="./resources/set2/0992/pred.glb" class="set2" shadow-intensity="1" exposure="0.7" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+				<div class='column'>
+			
+					<div id="card">
+						<model-viewer src="./resources/set2/0992/gt.glb" class="set2" shadow-intensity="1" exposure="0.7" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="set3" class="tabcontent" style="display:none">
+		<div class='container body set3'>
+			<div class ='row'>
+				<div class ='column'>
+					<div class='header header-input'>View A</div>
+				</div>
+				<div class ='column'>
+					<div class='header header-input'>View B</div>
+				</div>
+				<div class ='column'>
+					<div class='header header-input'>View C</div>
+				</div>
+				<div class ='column'>
+					<div class='header header-result'>Ours</div>
+				</div>
+				<div class ='column'>
+					<div class='header header-result'>Ground Truth</div>
+				</div>
+			</div>
+	
+			<div class='row'>
+				<div class='column'>
+					<a href='./resources/set3/0042/0.png'><img class='input-img view1' src='./resources/set3/0042/0.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set3/0042/1.png'><img class='input-img view2' src='./resources/set3/0042/1.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set3/0042/2.png'><img class='input-img view3' src='./resources/set3/0042/2.png'></img></a>
+				</div>
+				<div class='column'>
+		
+					<div id="card">
+						<model-viewer src="./resources/set3/0042/pred.glb" class="set3" shadow-intensity="1" exposure="0.7"" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+				<div class='column'>
+		
+					<div id="card">
+						<model-viewer src="./resources/set3/0042/gt.glb" class="set3" shadow-intensity="1" exposure="0.7"" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+			</div>
+
+			<div class='row'>
+				<div class='column'>
+					<a href='./resources/set3/0082/0.png'><img class='input-img view1' src='./resources/set3/0082/0.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set3/0082/1.png'><img class='input-img view2' src='./resources/set3/0082/1.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set3/0082/2.png'><img class='input-img view3' src='./resources/set3/0082/2.png'></img></a>
+				</div>
+				<div class='column'>
+		
+					<div id="card">
+						<model-viewer src="./resources/set3/0082/pred.glb" class="set3" shadow-intensity="1" exposure="0.7"" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+				<div class='column'>
+		
+					<div id="card">
+						<model-viewer src="./resources/set3/0082/gt.glb" class="set3" shadow-intensity="1" exposure="0.7"" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+			</div>
+
+			<div class='row'>
+				<div class='column'>
+					<a href='./resources/set3/0113/0.png'><img class='input-img view1' src='./resources/set3/0113/0.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set3/0113/1.png'><img class='input-img view2' src='./resources/set3/0113/1.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set3/0113/2.png'><img class='input-img view3' src='./resources/set3/0113/2.png'></img></a>
+				</div>
+				<div class='column'>
+		
+					<div id="card">
+						<model-viewer src="./resources/set3/0113/pred.glb" class="set3" shadow-intensity="1" exposure="0.7"" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+				<div class='column'>
+		
+					<div id="card">
+						<model-viewer src="./resources/set3/0113/gt.glb" class="set3" shadow-intensity="1" exposure="0.7"" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="set5" class="tabcontent" style="display:none">
+		<div class='container body set5'>
+			<div class ='row'>
+				<div class ='column'>
+					<div class='header header-input'>View A</div>
+				</div>
+				<div class ='column'>
+					<div class='header header-input'>View B</div>
+				</div>
+				<div class ='column'>
+					<div class='header header-input'>View C</div>
+				</div>
+				<div class ='column'>
+					<div class='header header-input'>View D</div>
+				</div>
+				<div class ='column'>
+					<div class='header header-input'>View E</div>
+				</div>
+				<div class ='column'>
+					<div class='header header-result'>Ours</div>
+				</div>
+				<div class ='column'>
+					<div class='header header-result'>Ground Truth</div>
+				</div>
+			</div>
+	
+			<div class='row'>
+				<div class='column'>
+					<a href='./resources/set5/0030/0.png'><img class='input-img view1' src='./resources/set5/0030/0.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set5/0030/1.png'><img class='input-img view2' src='./resources/set5/0030/1.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set5/0030/2.png'><img class='input-img view3' src='./resources/set5/0030/2.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set5/0030/3.png'><img class='input-img view4' src='./resources/set5/0030/3.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set5/0030/4.png'><img class='input-img view5' src='./resources/set5/0030/4.png'></img></a>
+				</div>
+
+				<div class='column'>
+					<div id="card">
+						<model-viewer src="./resources/set5/0030/pred.glb" class="set5" shadow-intensity="1" exposure="0.7"" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+
+				<div class='column'>
+					<div id="card">
+						<model-viewer src="./resources/set5/0030/gt.glb" class="set5" shadow-intensity="1" exposure="0.7"" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+				
+			</div>
+
+
+			<div class='row'>
+				<div class='column'>
+					<a href='./resources/set5/0054/0.png'><img class='input-img view1' src='./resources/set5/0054/0.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set5/0054/1.png'><img class='input-img view2' src='./resources/set5/0054/1.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set5/0054/2.png'><img class='input-img view3' src='./resources/set5/0054/2.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set5/0054/3.png'><img class='input-img view4' src='./resources/set5/0054/3.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set5/0054/4.png'><img class='input-img view5' src='./resources/set5/0054/4.png'></img></a>
+				</div>
+
+				<div class='column'>
+					<div id="card">
+						<model-viewer src="./resources/set5/0054/pred.glb" class="set5" shadow-intensity="1" exposure="0.7"" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+
+				<div class='column'>
+					<div id="card">
+						<model-viewer src="./resources/set5/0054/gt.glb" class="set5" shadow-intensity="1" exposure="0.7"" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+				
+			</div>
+
+			<div class='row'>
+				<div class='column'>
+					<a href='./resources/set5/0073/0.png'><img class='input-img view1' src='./resources/set5/0073/0.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set5/0073/1.png'><img class='input-img view2' src='./resources/set5/0073/1.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set5/0073/2.png'><img class='input-img view3' src='./resources/set5/0073/2.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set5/0073/3.png'><img class='input-img view4' src='./resources/set5/0073/3.png'></img></a>
+				</div>
+				<div class='column'>
+					<a href='./resources/set5/0073/4.png'><img class='input-img view5' src='./resources/set5/0073/4.png'></img></a>
+				</div>
+
+				<div class='column'>
+					<div id="card">
+						<model-viewer src="./resources/set5/0073/pred.glb" class="set5" shadow-intensity="1" exposure="0.7"" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+
+				<div class='column'>
+					<div id="card">
+						<model-viewer src="./resources/set5/0073/gt.glb" class="set5"shadow-intensity="1" exposure="0.7"" camera-controls
+							camera-orbit="0deg 75deg 70%" background-color: rgb(197, 4, 4);>
+						</model-viewer>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+
+
+	<script>
+		function onClick(evt, numViews) {
+		  let i, tabcontent, tablinks;
+		
+		  tabcontent = document.getElementsByClassName("tabcontent");
+		  for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		  }
+		
+		  tablinks = document.getElementsByClassName("tablinks");
+		  for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		  }
+		
+		  document.getElementById(numViews).style.display = "block";
+		  evt.currentTarget.className += " active";
+		}
+	</script>
+	<br><br>
+	<hr>
+
+	<table align=center width=100%>
 		<tr>
-			<td width=400px>
+			<td width=100%>
 				<center>
 					<center><h1>Acknowledgements</h1></center>
 					This work was supported by the DARPA Machine Common Sense Program. We would like to thank Richard Higgins and 
 					members of the Fouhey lab for helpful discussions and feedback.
 					<br><br>
-					This website template was originally made by some <a href="http://richzhang.github.io/colorization/">colorful folks</a>.
+					Our project website was adapted from <a href="https://jinlinyi.github.io/SparsePlanes/">Sparse Planes</a> and was originally made by some <a href="http://richzhang.github.io/colorization/">colorful folks</a>. The interactive examples are powered by <a href="https://modelviewer.dev/">model-viewer</a>. 
 				</center>
 			</td>
 		</tr>
 	</table>
-
-<br>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </body>
 </html>
 
