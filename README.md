@@ -21,6 +21,7 @@ cd PlaneFormers
 
 # setting up conda environment
 conda env create -f environment.yml
+conda activate planeformers
 python -m pip install detectron2 -f \
   https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.10/index.html
 pip install -e .
