@@ -16,8 +16,8 @@ ECCV 2022
 ## 1. Environment Setup
 
 ```bash
-git clone https://github.com/samiragarwala/multi-surface-recon 
-cd multi-surface-recon
+git clone https://github.com/samiragarwala/PlaneFormers.git
+cd PlaneFormers
 
 # setting up conda environment
 conda env create -f environment.yml
