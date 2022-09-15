@@ -322,6 +322,7 @@ class PlaneFormerInferenceVisualization():
         for i in range(self.num_view):
             img_file = self.img_list[i]
             img = cv2.imread(img_file, cv2.IMREAD_COLOR)[:,:,::-1]
+            img = cv2.resize(img, (640, 480))
             height, width, _ = img.shape
             vis = Visualizer(img)
             p_instance = create_instances(rcnn_output[str(i)]['instances'], img.shape[:2], 
@@ -386,9 +387,17 @@ class PlaneFormerInferenceVisualization():
             plane_locals = merge_plane_params_from_local_params(plane_locals, corr_list, pred_camera)
 
         os.makedirs(output_dir, exist_ok=True)
+        os.makedirs(os.path.join(output_dir, 'resized'), exist_ok=True)
         for i in range(self.num_view):
             img_file = file_names[i]
-            img = cv2.imread(img_file, cv2.IMREAD_COLOR)[:,:,::-1]
+            img = cv2.imread(img_file, cv2.IMREAD_COLOR)
+            img = cv2.resize(img, (640, 480))
+
+            # saving resized images
+            img_file = f'{os.path.join(output_dir, "resized", str(i))}.png'
+            cv2.imwrite(img_file, img)
+
+            img = img[:,:,::-1]
 
             # save original images
             # imageio.imwrite(os.path.join(output_dir, prefix + f'_view_{i}.png'), img)
@@ -428,6 +437,7 @@ class PlaneFormerInferenceVisualization():
             prefix = key+'_pred'
         save_obj(folder=output_dir, prefix=prefix, meshes=joint_mesh, cam_meshes=cam_meshes, decimal_places=10, blend_flag=True, map_files=None, uv_maps=uv_maps)
 
+        shutil.rmtree(os.path.join(output_dir, 'resized'), ignore_errors=True)
 
 
 def main(args):
