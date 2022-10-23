@@ -431,7 +431,7 @@ def gen_eval_file(params, camera_search_len=1, device='cuda', no_file=False):
 
 
     if params.write_new_eval_file or no_file:
-        output_dict = []
+        output_dict = {}
     else:
         path = params.eval_input_path
         f = open(path, 'rb')
@@ -556,7 +556,7 @@ def gen_eval_file(params, camera_search_len=1, device='cuda', no_file=False):
             temp_pred['best_assignment'] = pred_corr
             temp_pred['plane_param_override'] = None
             temp_pred['best_camera_centroids'] = best_camera_centroids
-            output_dict.append(temp_pred)
+            output_dict[i] = temp_pred
         else:
             output_dict[i]['best_assignment'] = pred_corr
             output_dict[i]['best_camera'] = best_camera
