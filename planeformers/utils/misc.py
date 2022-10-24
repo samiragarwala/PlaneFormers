@@ -30,7 +30,6 @@ import KMSolver
 
 from planeformers.utils.dataset import *
 from planeformers.models.planeformer import *
-from planeformers.models.inference import *
 from sparseplane.utils.mesh_utils import *
 from sparseplane.config import get_sparseplane_cfg_defaults
 

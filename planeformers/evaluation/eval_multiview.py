@@ -1,4 +1,3 @@
-from audioop import avg
 from planeformers.utils.misc import *
 from planeformers.models.inference import *
 import json
@@ -273,6 +272,7 @@ def eval_multi_view(params):
 
 if __name__=="__main__":
     parser = argparse.ArgumentParser(description='Transformer model for planar embedding correspondences')
+    parser.add_argument('--dataset_path', help='path to plane embedding dataset', default=None)
     parser.add_argument('--mp3d_corr_file', help=".pkl file for matching up mp3d and multi-view dataset")
     parser.add_argument('--multi_view_file', help="Multi-view json file")
     parser.add_argument('--num_images', type=int)
@@ -287,5 +287,6 @@ if __name__=="__main__":
 
     params = get_default_dataset_config("plane_params")
     params = SimpleNamespace(**vars(args), **vars(params))
+    params.path = args.dataset_path
 
     eval_multi_view(params)
